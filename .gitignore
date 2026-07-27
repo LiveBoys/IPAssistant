@@ -1,0 +1,40 @@
+# CMake and local build output
+/build/
+/ci-build/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+*.ninja
+.ninja_*
+compile_commands.json
+*.qm
+
+# Installer and release output
+/installer/Output/
+/release/
+/image/
+*.exe.sha256
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+.qtc_clangd/
+.cache/
+.clangd/
+
+# IDE and operating-system files
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary and backup files
+*.log
+*.tmp
+*.bak

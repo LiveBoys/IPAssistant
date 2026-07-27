@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<artifact-configuration xmlns="http://signpath.io/artifact-configuration/v1">
+  <parameters>
+    <parameter name="version" required="true" />
+  </parameters>
+  <zip-file>
+    <pe-file
+      path="IPAssistant.exe"
+      company-name="Jiugang He"
+      product-name="IP Assistant"
+      product-version="${version}"
+      file-version="${version}"
+      original-filename="IPAssistant.exe">
+      <authenticode-sign
+        description="IP Assistant"
+        description-url="https://github.com/LiveBoys/IPAssistant" />
+    </pe-file>
+    <pe-file
+      path="IPAssistantService.exe"
+      company-name="Jiugang He"
+      product-name="IP Assistant"
+      product-version="${version}"
+      file-version="${version}"
+      original-filename="IPAssistantService.exe">
+      <authenticode-sign
+        description="IP Assistant Service"
+        description-url="https://github.com/LiveBoys/IPAssistant" />
+    </pe-file>
+  </zip-file>
+</artifact-configuration>

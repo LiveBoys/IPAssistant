@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProfileEditDialog</class>
+ <widget class="QDialog" name="ProfileEditDialog">
+  <property name="windowTitle">
+  <string>Add Profile</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <property name="minimumWidth">
+   <number>420</number>
+  </property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="labelAlignment">
+      <set>Qt::AlignLeft</set>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="nameLabel">
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="m_nameEdit">
+       <property name="placeholderText">
+        <string>e.g. Home-WiFi</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="deviceLabel">
+       <property name="text">
+        <string>Device</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="m_deviceCombo"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="dhcpLabel">
+       <property name="text">
+        <string>DHCP</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="ToggleSwitch" name="m_dhcpBox">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="ipLabel">
+       <property name="text">
+        <string>IP Address</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QWidget" name="ipRow">
+       <layout class="QVBoxLayout" name="ipRowLay">
+        <property name="leftMargin">0</property>
+        <property name="topMargin">0</property>
+        <property name="rightMargin">0</property>
+        <property name="bottomMargin">0</property>
+        <property name="spacing">1</property>
+        <item>
+         <widget class="QLineEdit" name="m_ipEdit">
+          <property name="placeholderText">
+           <string>192.168.1.10</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="m_ipErrLabel">
+          <property name="styleSheet">
+           <string>color: #e53935; font-size: 8pt; margin-left: 2px;</string>
+          </property>
+          <property name="visible">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="maskLabel">
+       <property name="text">
+        <string>Subnet Mask</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QWidget" name="maskRow">
+       <layout class="QVBoxLayout" name="maskRowLay">
+        <property name="leftMargin">0</property>
+        <property name="topMargin">0</property>
+        <property name="rightMargin">0</property>
+        <property name="bottomMargin">0</property>
+        <property name="spacing">1</property>
+        <item>
+         <widget class="QLineEdit" name="m_maskEdit">
+          <property name="placeholderText">
+           <string>255.255.255.0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="m_maskErrLabel">
+          <property name="styleSheet">
+           <string>color: #e53935; font-size: 8pt; margin-left: 2px;</string>
+          </property>
+          <property name="visible">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="gwLabel">
+       <property name="text">
+        <string>Default Gateway</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QWidget" name="gwRow">
+       <layout class="QVBoxLayout" name="gwRowLay">
+        <property name="leftMargin">0</property>
+        <property name="topMargin">0</property>
+        <property name="rightMargin">0</property>
+        <property name="bottomMargin">0</property>
+        <property name="spacing">1</property>
+        <item>
+         <widget class="QLineEdit" name="m_gwEdit">
+          <property name="placeholderText">
+           <string>192.168.1.1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="m_gwErrLabel">
+          <property name="styleSheet">
+           <string>color: #e53935; font-size: 8pt; margin-left: 2px;</string>
+          </property>
+          <property name="visible">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="dnsLabel">
+       <property name="text">
+        <string>Automatic DNS</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="ToggleSwitch" name="m_defaultDnsBox">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="prefDnsLabel">
+       <property name="text">
+        <string>Preferred DNS</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QWidget" name="prefDnsRow">
+       <layout class="QVBoxLayout" name="prefDnsRowLay">
+        <property name="leftMargin">0</property>
+        <property name="topMargin">0</property>
+        <property name="rightMargin">0</property>
+        <property name="bottomMargin">0</property>
+        <property name="spacing">1</property>
+        <item>
+         <widget class="QLineEdit" name="m_prefDnsEdit">
+          <property name="placeholderText">
+           <string>8.8.8.8</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="m_prefDnsErrLabel">
+          <property name="styleSheet">
+           <string>color: #e53935; font-size: 8pt; margin-left: 2px;</string>
+          </property>
+          <property name="visible">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="altDnsLabel">
+       <property name="text">
+        <string>Alternate DNS</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QWidget" name="altDnsRow">
+       <layout class="QVBoxLayout" name="altDnsRowLay">
+        <property name="leftMargin">0</property>
+        <property name="topMargin">0</property>
+        <property name="rightMargin">0</property>
+        <property name="bottomMargin">0</property>
+        <property name="spacing">1</property>
+        <item>
+         <widget class="QLineEdit" name="m_altDnsEdit">
+          <property name="placeholderText">
+           <string>1.1.1.1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="m_altDnsErrLabel">
+          <property name="styleSheet">
+           <string>color: #e53935; font-size: 8pt; margin-left: 2px;</string>
+          </property>
+          <property name="visible">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ToggleSwitch</class>
+   <extends>QCheckBox</extends>
+   <header>ui/ToggleSwitch.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ProfileEditDialog</receiver>
+   <slot>reject()</slot>
+  </connection>
+ </connections>
+</ui>
