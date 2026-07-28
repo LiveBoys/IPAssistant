@@ -92,8 +92,7 @@ jobs:
           $configured =
             -not [string]::IsNullOrWhiteSpace($env:SIGNPATH_ORGANIZATION_ID) -and
             -not [string]::IsNullOrWhiteSpace($env:SIGNPATH_TOKEN_FOR_CHECK)
-          "configured=$($configured.ToString().ToLowerInvariant())" >>
-            $env:GITHUB_OUTPUT
+          "configured=$($configured.ToString().ToLowerInvariant())" >> $env:GITHUB_OUTPUT
 
       - name: Install Qt and MinGW
         shell: pwsh
@@ -104,10 +103,8 @@ jobs:
           python -m aqt install-tool windows desktop `
             tools_mingw1310 -O $env:QT_ROOT
 
-          "$env:QT_ROOT\$env:QT_VERSION\mingw_64\bin" >>
-            $env:GITHUB_PATH
-          "$env:QT_ROOT\Tools\mingw1310_64\bin" >>
-            $env:GITHUB_PATH
+          "$env:QT_ROOT\$env:QT_VERSION\mingw_64\bin" >> $env:GITHUB_PATH
+          "$env:QT_ROOT\Tools\mingw1310_64\bin" >> $env:GITHUB_PATH
 
       - name: Configure Release build
         shell: pwsh
